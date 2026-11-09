@@ -36,7 +36,7 @@ SELECT
 	*
 FROM employees
 WHERE
-	'name' = "박보람"
+	`name` = "박보람"
 ;
 
 -- 생일 2000-01-01이후 사원
@@ -47,7 +47,7 @@ WHERE
 	birth >= '2000-01-01'
 ;
 
--- 퇴사한 사원
+-- 퇴사하지 않은 사원
 SELECT
 	*
 FROM employees
@@ -55,7 +55,7 @@ WHERE
 	fire_at IS NULL
 ;
 
--- 퇴사하지 않은 사원
+-- 퇴사한 사원
 SELECT
 	*
 FROM employees
@@ -265,3 +265,4 @@ WHERE
 GROUP BY title_code
 HAVING cnt >= 10000
 ;
+
