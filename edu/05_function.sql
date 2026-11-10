@@ -88,8 +88,7 @@ SELECT
 SELECT CONCAT(
     LEFT(name, 1),
     CASE
-        WHEN CHAR_LENGTH(name) = 1 THEN '*'
-        WHEN CHAR_LENGTH(name) = 2 THEN '*'
+        WHEN CHAR_LENGTH(name) <= 2 THEN '*'
         ELSE REPEAT('*', CHAR_LENGTH(name) - 2)
     END,
     CASE
